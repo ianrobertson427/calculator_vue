@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -9,11 +8,21 @@
 <body>
   <div id="app">
     {{ message }}
-    <div>1st number: <input type="text"></div>
-    <div>2nd number: <input type="text"></div>
-    <div>3rd number: <input type="text"></div>
-    <div><button>Compute sum</button></div>
-    <p>The sum is: </p>
+    <div>1st number: <input v-model="number1" type="text"></div>
+    <div>2nd number: <input v-model="number2" type="text"></div>
+    <div>3rd number: <input v-model="number3" type="text"></div>
+    <div><button v-on:click="computeSum()">Compute sum</button></div>
+    <p>The sum is: {{ sum }}</p>
+    <div>1st number: <input v-model="number4" type="text"></div>
+    <div>2nd number: <input v-model="number5" type="text"></div>
+    <div>3rd number: <input v-model="number6" type="text"></div>
+    <div><button v-on:click="computeSub()">Compute sub</button></div>
+    <p>You did some subractions: {{ sub }}</p>
+    <div>1st number: <input v-model="number7" type="text"></div>
+    <div>2nd number: <input v-model="number8" type="text"></div>
+    <div>3rd number: <input v-model="number9" type="text"></div>
+    <div><button v-on:click="computeAvg()">Compute average</button></div>
+    <p>You did some average: {{ avg }}</p>
   </div>
 </body>
 </html>
